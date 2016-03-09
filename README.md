@@ -3,6 +3,9 @@
 Sistema de Eventos encomendado pela Morena.
 Projeto do curso "Welcome to the Django".
 
+[![Build Status](https://travis-ci.org/leogreal/wttd.svg?branch=master)](https://travis-ci.org/leogreal/wttd)
+[![Code Health](https://landscape.io/github/leogreal/wttd/master/landscape.svg?style=flat)](https://landscape.io/github/leogreal/wttd/master)
+
 ## Como desenvolver
 
 1. Clone o repositorio.
