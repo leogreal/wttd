@@ -5,6 +5,9 @@ Projeto do curso "Welcome to the Django".
 
 [![Build Status](https://travis-ci.org/leogreal/wttd.svg?branch=master)](https://travis-ci.org/leogreal/wttd)
 [![Code Health](https://landscape.io/github/leogreal/wttd/master/landscape.svg?style=flat)](https://landscape.io/github/leogreal/wttd/master)
+[![Code Climate](https://codeclimate.com/repos/56e00f6580b254141d00ac50/badges/2395869dc4482ff7a17e/gpa.svg)](https://codeclimate.com/repos/56e00f6580b254141d00ac50/feed)
+[![Test Coverage](https://codeclimate.com/repos/56e00f6580b254141d00ac50/badges/2395869dc4482ff7a17e/coverage.svg)](https://codeclimate.com/repos/56e00f6580b254141d00ac50/coverage)
+[![Issue Count](https://codeclimate.com/repos/56e00f6580b254141d00ac50/badges/2395869dc4482ff7a17e/issue_count.svg)](https://codeclimate.com/repos/56e00f6580b254141d00ac50/feed)
 
 ## Como desenvolver
 
