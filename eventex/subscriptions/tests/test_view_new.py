@@ -38,6 +38,7 @@ class SubscriptionsNewGet(TestCase):
         form = self.resp.context['form']
         self.assertIsInstance(form, SubscriptionForm)
 
+
 class SubscriptionsNewPostValid(TestCase):
     def setUp(self):
         data = dict(name='Henrique Bastos',
@@ -45,7 +46,6 @@ class SubscriptionsNewPostValid(TestCase):
                     email='herinque@bastos.net',
                     phone='21-99618-6180')
         self.resp = self.client.post(r('subscriptions:new'), data)
-
 
     def test_post(self):
         """Valid POST should redirect to /inscricao/1/"""
@@ -56,6 +56,7 @@ class SubscriptionsNewPostValid(TestCase):
 
     def test_save_subscription(self):
         self.assertTrue(Subscription.objects.exists())
+
 
 class SubscriptionsNewPostInvalid(TestCase):
     def setUp(self):
@@ -78,3 +79,14 @@ class SubscriptionsNewPostInvalid(TestCase):
 
     def test_dont_save_subscription(self):
         self.assertFalse(Subscription.objects.exists())
+
+
+class TemplateRegressionTest(TestCase):
+    def test_template_has_non_field_error(self):
+        invalid_data = dict(
+            name='Henrique Bastos',
+            cpf='12345678901'
+        )
+        response = self.client.post(r('subscriptions:new'), invalid_data)
+
+        self.assertContains(response, '<ul class="errorlist nonfield>"')
