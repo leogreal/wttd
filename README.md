@@ -36,7 +36,7 @@ python manage.py test
 4. Defina DEBUG=False
 5. Configure o serviço de e-mail.
 6. Envie o código para o heroku.
-
+7. Rode as migrações
 ```console
 heroku create minhainstancia
 heroku config:push
@@ -44,4 +44,5 @@ heroku config:set SECRET_KEY=`python contrib/secret_gen.py`
 heroku config:set DEBUG=False
 # Configuro o e-mail
 git push heroku master --force
+heroku run python manage.py migrate
 ```
